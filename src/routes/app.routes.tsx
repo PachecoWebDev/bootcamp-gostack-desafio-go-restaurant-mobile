@@ -8,6 +8,7 @@ import TabRoutes from './tab.routes';
 
 import Home from '../pages/Home';
 import FoodDetails from '../pages/FoodDetails';
+import OrderCreated from '../pages/OrderCreated';
 
 const App = createStackNavigator();
 
@@ -62,6 +63,14 @@ const AppRoutes: React.FC = () => (
             shadowColor: 'transparent',
           },
         })}
+      />
+      <App.Screen
+        name="OrderCreated"
+        component={OrderCreated}
+        options={{
+          headerShown: false,
+          gestureEnabled: false,
+        }}
       />
     </App.Navigator>
   </NavigationContainer>
